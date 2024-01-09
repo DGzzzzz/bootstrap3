@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        .card-img-overlay {
+            background-color: rgba(0,0,0, 0.4);
+        }
+
+        body {
+            background-color: rgba(0,0,0, 0.4);
+        }
+
+        h3 {
+            margin-top: 16px;
+            border-bottom: solid 2px rgba(0,0,0, 0.6);
+        }
+
+        .carousel-item {
+            margin-top: 60px;
+        }
+
+        .col-4 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        @media screen and (max-width: 667px) {
+            .card {
+                margin: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .card {
+                margin: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav id="navegador" class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Red Dead Redemption 2</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" aria-current="page" href="#">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#personagens">Conheça os Personagens</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Personagens
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#arthur">Arthur Morgan</a> </li>
+                                    <li><a class="dropdown-item" href="#jhon">John Marston</a> </li>
+                                    <li><a class="dropdown-item" href="#dutch">Dutch Van Der Linde</a> </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Outros</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="digite aqui" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Procure</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="carousel" data-bs-ride="carousel" class="carousel carousel-fade slide">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <img src="https://img.redbull.com/images/c_crop,w_3840,h_1920,x_0,y_0,f_auto,q_auto/c_scale,w_1200/redbullcom/2018/10/26/6ecc5872-9827-4e18-871d-0834105f2fbe/red-dead-redemption-2-dicas" class="d-block w-100 rounded-3" alt="RDR2 Art">
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://www.digitaltrends.com/wp-content/uploads/2018/10/red-dead-redemption-2-review-feature-header.jpg?p=1" class="d-block w-100  rounded-3" alt="Arthur paisagem">
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img src="https://assetsio.reedpopcdn.com/red-dead-redemption-2.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp" class="d-block w-100  rounded-3" alt="Arthur segurando um animal">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <div id="carousel" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+        </div>
+        <section><h3 id="personagens" >Conheça os Personagens</h3>
+        <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-bg-dark">
+                <img src="https://static.tvtropes.org/pmwiki/pub/images/arthur_morgan___red_dead_redemption_2.jpg" />
+                <div class="card-img-overlay">
+                    <h4 id="arthur" class="card-title">Arthur Morgan</h4>
+                    <h5 class="card-subtitle">Personagem principal</h5>
+                    <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam accusantium quis necessitatibus culpa nam quasi.
+                    </p>
+                    <a href="#" class="btn btn-primary">Botão link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-bg-dark">
+                <img src="https://static.tvtropes.org/pmwiki/pub/images/john_marston___red_dead_redemption_2.jpg"/>
+                <div class="card-img-overlay">
+                    <h4 id="jhon" class="card-title">John Marston</h4>
+                    <h5 class="card-subtitle">Segundo personagem principal</h5>
+                    <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam accusantium quis necessitatibus culpa nam quasi.
+                    </p>
+                    <a href="#" class="btn btn-primary">Botão link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-bg-dark">
+                <img src="https://static.tvtropes.org/pmwiki/pub/images/dutch_van_der_linde___red_dead_redemption_2.jpg"/>
+                <div class="card-img-overlay">
+                    <h4 id="dutch" class="card-title">Dutch Van Der Linde</h4>
+                    <h5 class="card-subtitle">Líder da gangue</h5>
+                    <p class="card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam accusantium quis necessitatibus culpa nam quasi.
+                    </p>
+                    <a href="#" class="btn btn-primary">Botão link</a>
+                </div>
+            </div>
+        </div>    
+        </div>
+    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
